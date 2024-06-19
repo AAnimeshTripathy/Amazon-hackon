@@ -1,0 +1,28 @@
+import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+
+import Home from "./pages/Home";
+import Checkout from "./pages/Checkout";
+import Dashboard from "./pages/Dashboard";
+import Header from "./components/Header";
+import ProductDetails from "./pages/ProductDetails";
+import ScrollUp from "./utils/ScrollUp";
+
+export default function App() {
+  return (
+    <div className="bg-gray-100 h-full">
+      <Header />
+      <main className="2xl:max-w-screen-2xl xl:max-w-screen-xl sm:px-4 mx-auto pb-12">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="products/:id" element={<ProductDetails />} />
+          <Route path="budget" element={<Dashboard />} />
+          <Route path="checkout" element={<Checkout />} />
+        </Routes>
+      </main>
+      <ScrollUp />
+      <ToastContainer />
+    </div>
+  );
+}
