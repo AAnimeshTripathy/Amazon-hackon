@@ -112,30 +112,43 @@ export default function Header() {
             <button
               className="flex flex-col text-white hoverOutline"
               onClick={handleSignOut}
-            >
-              <span className="text-xs font-medium">
-                Hello, {user.displayName}
+            > 
+              <span className="text-xs font-bold">
+                Sign out
               </span>
-              <span className="text-sm font-bold">Account & Lists</span>
             </button>
           ) : (
             <button
               className="flex flex-col text-white hoverOutline"
-              onClick={handleSignIn}
+              onClick={!user ? handleSignIn : () => toast.info("Please sign in")}
             >
-              <span className="text-xs font-medium">Hello, Sign in</span>
-              <span className="text-sm font-bold">Account & Lists</span>
+              <span className="text-xs font-bold">Sign in</span>
             </button>
           )}
+
+          {/* Account & Lists */}
+          <Link
+            to={user ? "/accounts-lists" : ""}
+            className={`flex flex-col text-white hoverOutline ${!user ? "cursor-not-allowed" : ""}`}
+          >
+            {user ? (
+              <>
+                <span className="text-xs font-medium">
+                  Hello, {user.displayName}
+                </span>
+                <span className="text-sm font-bold">Account & Lists</span>
+              </>
+            ) : (
+              <>
+                <span className="text-xs font-medium">Hello, Sign in</span>
+                <span className="text-sm font-bold">Account & Lists</span>
+              </>
+            )}
+          </Link>
           {/* Returns & Orders */}
           <Link to="/" className="flex flex-col text-white hoverOutline">
             <span className="text-xs font-medium">Returns</span>
             <span className="text-sm font-bold">&amp; Orders</span>
-          </Link>
-          {/* Dashboard */}
-          <Link to="/dashboard" className="flex flex-col text-white hoverOutline">
-            <span className="text-xs font-medium">Amazon Pay</span>
-            <span className="text-sm font-bold">&amp; Dashboard</span>
           </Link>
 
           {/* Cart */}
