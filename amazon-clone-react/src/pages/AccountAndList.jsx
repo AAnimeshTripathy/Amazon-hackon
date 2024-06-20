@@ -16,8 +16,8 @@ const cardsData = [
 function AccountAndList() {
   return (
     <div>
-    <h1 className="font-bold text-center text-3xl">Your Account</h1>
-    <div className="flex flex-col items-center justify-center">
+    <h1 className="font-bold text-center text-3xl mt-6">Your Account</h1>
+    <div className="flex flex-col items-center justify-center mb-64">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cardsData.map((card, index) => (
           <Card

@@ -7,6 +7,7 @@ import Checkout from "./pages/Checkout";
 import AccountAndList from "./pages/AccountAndList";
 import BudgetDashboard from "./pages/BudgetDashboard";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import ProductDetails from "./pages/ProductDetails";
 import ScrollUp from "./utils/ScrollUp";
 
@@ -25,6 +26,7 @@ export default function App() {
       </main>
       <ScrollUp />
       <ToastContainer />
+      <Footer />
     </div>
   );
 }
