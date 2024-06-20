@@ -34,7 +34,7 @@ export const selectItems = (state) => state.basket.items;
 // Get sub total of the cart items
 export const selectTotal = (state) =>
   state.basket.items.reduce((total, currValue) => {
-    return total + currValue.price;
+    return total + Math.round(currValue.price * 63);
   }, 0);
 
 export default basketSlice.reducer;

@@ -56,11 +56,11 @@ export default function Product({ data }) {
           ))}
       </p>
       <p className="line-clamp-3 text-xs mb-3">{description}</p>
-      <p className="mb-3 font-bold">{"$" + price}</p>
+      <p className="mb-3 font-bold">{Math.round(price * 63) + " Rs"}</p>
       {hasPrime && (
         <div className="flex items-center mt-auto">
           <img src={Prime} alt="Prime" className="w-12 h-12 mr-2" />
-          <small className="opacity-70">FREE Nex-day delivery!</small>
+          <small className="opacity-70">FREE Next-day delivery!</small>
         </div>
       )}
       <button className="mt-auto btn" onClick={addItemToBasket}>

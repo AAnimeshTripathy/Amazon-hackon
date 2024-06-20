@@ -39,7 +39,7 @@ export default function CheckoutItem({ data }) {
             ))}
         </p>
         <p className="line-clamp-3">{description}</p>
-        <p className="font-bold">{"$" + price}</p>
+        <p className="font-bold">{Math.round(price * 63) + " Rs"}</p>
       </div>
       {/* Btn */}
       <div className="sm:basis-1/5 basis-full">

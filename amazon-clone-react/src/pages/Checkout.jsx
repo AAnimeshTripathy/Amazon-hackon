@@ -39,7 +39,7 @@ export default function Checkout() {
       <div className="lg:basis-1/5 lg:ml-4 mt-5 lg:mt-0 bg-white p-4 h-fit">
         <p className="mb-4 text-lg">
           Subtotal ({checkoutProducts.length > 0 ? checkoutProducts.length : 0}{" "}
-          items): <strong>${total?.toFixed(2)}</strong>
+          items): <strong>{total?.toFixed(2)} Rs</strong>
         </p>
         <button onClick={user ? null : handleSignIn} className="btn w-full">
           {user ? "Proceed to checkout" : "Sign in to checkout"}
