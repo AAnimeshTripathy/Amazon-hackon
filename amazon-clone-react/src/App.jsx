@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import Home from "./pages/Home";
 import Checkout from "./pages/Checkout";
 import AccountAndList from "./pages/AccountAndList";
+import BudgetDashboard from "./pages/BudgetDashboard";
 import Header from "./components/Header";
 import ProductDetails from "./pages/ProductDetails";
 import ScrollUp from "./utils/ScrollUp";
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="products/:id" element={<ProductDetails />} />
           <Route path="accounts-lists" element={<AccountAndList />} />
           <Route path="checkout" element={<Checkout />} />
+          <Route path="accounts-lists/budget-dashboard" element={<BudgetDashboard />} />
         </Routes>
       </main>
       <ScrollUp />
