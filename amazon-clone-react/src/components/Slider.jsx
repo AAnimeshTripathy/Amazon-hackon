@@ -2,7 +2,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { useState } from "react";
 
-import SlideImg1 from "../assets/slider/01.jpg";
+import SlideImg1 from "../assets/slider/04.jpg";
 import SlideImg2 from "../assets/slider/02.jpg";
 import SlideImg3 from "../assets/slider/03.jpg";
 import SlideImgMobile1 from "../assets/slider/01-mobile.jpg";
