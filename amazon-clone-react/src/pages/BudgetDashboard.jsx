@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { auth } from '../utils/firebase.config';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import Pagination from '../components/Pagination';
 import MonthYearDropdown from '../components/MonthYearDropdown';
 import YearDropdown from '../components/YearDropdown';
@@ -6,6 +8,7 @@ import FinanceCard from '../components/FinanceCard';
 import PieChart from '../components/PieChart';
 
 const BudgetDashboard = () => {
+  const [user] = useAuthState(auth);
   const [view, setView] = useState('Monthly');
   const [selectedMonth, setSelectedMonth] = useState('January');
   const [selectedYear, setSelectedYear] = useState('2024');
@@ -96,7 +99,9 @@ const BudgetDashboard = () => {
           />
         </div>
       </div>
-      
+        {/* <div>
+        {user && <h1>{user.email}</h1>}
+        </div> */}
       <div className="w-1/2">
         <PieChart data={spendingData} />
       </div>
