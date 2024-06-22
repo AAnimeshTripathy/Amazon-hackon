@@ -11,7 +11,7 @@
 # Prototype Images
 1. **Payment Assistant Smart Payments**
 
-    ![image](https://github.com/)
+    ![image](https://github.com/AAnimeshTripathy/Amazon-hackon/blob/main/images/dashboard.jpg)
     
 2. **Budget Dashboard and Management Tools**
 
