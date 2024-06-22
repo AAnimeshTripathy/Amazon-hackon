@@ -17,7 +17,7 @@
     
 2. **Budget Dashboard and Management Tools**
 
-    ![image]([https://github.com/AAnimeshTripathy/Amazon-hackon/blob/main/images/dashboard.jpg])
+    ![image](https://github.com/AAnimeshTripathy/Amazon-hackon/blob/main/images/dashboard.jpg)
     
 3. **Comprehensive Savings Overview**
 
