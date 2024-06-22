@@ -6,7 +6,7 @@
 
 # Prototype Resources
 - Deployed on Website: [Website Link]()
-- Presentation of our prototype:
+- Presentation of Idea Submission Round: [Link](https://drive.google.com/file/d/1mzPJ2t67L8unvYl5UUxb3jMq0L6UuF4u/view?usp=sharing)
 
 # Prototype Images
 1. **Payment Assistant Smart Payments**
