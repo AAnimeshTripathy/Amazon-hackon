@@ -965,43 +965,91 @@ const getDataByMonthAndYear = (year, month) => {
   let startDate, endDate;
 
   if (!month) {
-      startDate = new Date(year, 0, 1); 
+      startDate = new Date(year, 0, 1);
       endDate = new Date(year, 11, 31);
   } else {
       if (month < 1 || month > 12) {
           throw new Error('Invalid month');
       }
-      startDate = new Date(year, month - 1, 1); 
+      startDate = new Date(year, month - 1, 1);
       endDate = new Date(year, month - 1, new Date(year, month, 0).getDate());
   }
 
   const returnData = {
-    "purchases": [],
-    "payments": [],
-    "savings": []
+      "purchases": [],
+      "payments": [],
+      "savings": []
   };
 
-  // Filter purchases, payments, and savings by date range
-  returnData.purchases = data.purchases.filter(purchase => {
-    const purchaseDate = new Date(purchase.date_of_purchase);
-    return purchaseDate >= startDate && purchaseDate <= endDate;
-  }).map(purchase => ({ category: purchase.category, totalAmount: purchase.paid_amount }));
+  // Combine purchases by category
+  const combinedPurchases = {};
+  data.purchases
+      .filter(purchase => {
+          const purchaseDate = new Date(purchase.date_of_purchase);
+          return purchaseDate >= startDate && purchaseDate <= endDate;
+      })
+      .forEach(purchase => {
+          if (combinedPurchases[purchase.category]) {
+              combinedPurchases[purchase.category] += purchase.paid_amount;
+          } else {
+              combinedPurchases[purchase.category] = purchase.paid_amount;
+          }
+      });
 
-  returnData.payments = data.payments.filter(payment => {
-    const paymentDate = new Date(payment.date_of_payment);
-    return paymentDate >= startDate && paymentDate <= endDate;
-  }).map(payment => ({ category: payment.category, totalAmount: payment.amount }));
+  // Convert combinedPurchases object to array of objects and round the total amount to two decimal places
+  returnData.purchases = Object.keys(combinedPurchases).map(category => ({
+      category: category,
+      totalAmount: Number(combinedPurchases[category].toFixed(2)) // Round to 2 decimal places
+  }));
 
-  returnData.savings = data.savings.filter(saving => {
-    const savingDate = new Date(saving.date_of_saving);
-    return savingDate >= startDate && savingDate <= endDate;
-  }).map(saving => ({ category: saving.category, totalAmount: saving.amount }));
+  // Combine payments by category
+  const combinedPayments = {};
+  data.payments
+      .filter(payment => {
+          const paymentDate = new Date(payment.date_of_payment);
+          return paymentDate >= startDate && paymentDate <= endDate;
+      })
+      .forEach(payment => {
+          if (combinedPayments[payment.category]) {
+              combinedPayments[payment.category] += payment.amount;
+          } else {
+              combinedPayments[payment.category] = payment.amount;
+          }
+      });
+
+  // Convert combinedPayments object to array of objects and round the total amount to two decimal places
+  returnData.payments = Object.keys(combinedPayments).map(category => ({
+      category: category,
+      totalAmount: Number(combinedPayments[category].toFixed(2)) // Round to 2 decimal places
+  }));
+
+  // Combine savings by category
+  const combinedSavings = {};
+  data.savings
+      .filter(saving => {
+          const savingDate = new Date(saving.date_of_saving);
+          return savingDate >= startDate && savingDate <= endDate;
+      })
+      .forEach(saving => {
+          if (combinedSavings[saving.category]) {
+              combinedSavings[saving.category] += saving.amount;
+          } else {
+              combinedSavings[saving.category] = saving.amount;
+          }
+      });
+
+  // Convert combinedSavings object to array of objects and round the total amount to two decimal places
+  returnData.savings = Object.keys(combinedSavings).map(category => ({
+      category: category,
+      totalAmount: Number(combinedSavings[category].toFixed(2)) // Round to 2 decimal places
+  }));
 
   return returnData;
 };
 
 // Example usage
 const result = getDataByMonthAndYear(2024);
+// const result = getDataByMonthAndYear(2024, 4);
 console.log(result);
 
 export default getDataByMonthAndYear;
