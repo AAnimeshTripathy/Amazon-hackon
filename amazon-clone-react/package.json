@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chec/commerce.js": "^2.8.0",
     "@reduxjs/toolkit": "^1.8.1",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@testing-library/jest-dom": "^5.16.4",
@@ -24,6 +25,7 @@
     "react-toastify": "^10.0.5",
     "redux-persist": "^6.0.0",
     "requirements": "^2.0.1",
+    "rsuite": "^5.64.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
