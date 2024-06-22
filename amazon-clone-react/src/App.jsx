@@ -9,6 +9,7 @@ import BudgetDashboard from "./pages/BudgetDashboard";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProductDetails from "./pages/ProductDetails";
+import Payment from "./pages/Payment";
 import ScrollUp from "./utils/ScrollUp";
 import Chatbot from "./components/chatbot";
 
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="products/:id" element={<ProductDetails />} />
           <Route path="accounts-lists" element={<AccountAndList />} />
           <Route path="checkout" element={<Checkout />} />
+          <Route path="checkout/payment" element={<Payment />} />
           <Route
             path="accounts-lists/budget-dashboard"
             element={<BudgetDashboard />}

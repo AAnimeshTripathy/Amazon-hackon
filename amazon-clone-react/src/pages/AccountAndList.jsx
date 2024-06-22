@@ -10,7 +10,7 @@ const cardsData = [
   { imgSrc: 'https://m.media-amazon.com/images/G/31/x-locale/cs/ya/images/Payments._CB485926359_.png', title: 'Payment Options', detail: 'Edit or add payment methods', link: '/accounts-lists' },
   { imgSrc: 'https://m.media-amazon.com/images/G/31/x-locale/cs/ya/images/amazon_pay._CB485946857_.png', title: 'Amazon Pay Balance', detail: 'Edit or add payment methods', link: '/accounts-lists' },
   { imgSrc: 'https://m.media-amazon.com/images/G/31/x-locale/cs/help/images/gateway/self-service/contact_us._CB623781998_.png', title: 'Contact Us', detail: 'Ask your queries', link: '/accounts-lists' },
-  { imgSrc: 'https://via.placeholder.com/65x42', title: 'Budget Dashboard', detail: 'Budget Dashboard', link: '/accounts-lists/budget-dashboard' },
+  { imgSrc: 'https://www.salesforce.com/content/dam/blogs/eu/2022/business-analytics.jpg', title: 'Budget Dashboard', detail: 'Budget Dashboard', link: '/accounts-lists/budget-dashboard' },
 ];
 
 function AccountAndList() {
