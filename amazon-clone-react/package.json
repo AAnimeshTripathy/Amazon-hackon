@@ -24,6 +24,7 @@
     "react-toastify": "^10.0.5",
     "redux-persist": "^6.0.0",
     "requirements": "^2.0.1",
+    "rsuite": "^5.64.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
