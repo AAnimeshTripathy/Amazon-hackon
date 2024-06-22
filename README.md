@@ -19,9 +19,9 @@
 
     ![image](https://github.com/AAnimeshTripathy/Amazon-hackon/blob/main/images/dashboard.jpg)
     
-3. **Comprehensive Savings Overview**
+3. **Smart Payment**
 
-    ![image](https://github.com/)
+    ![image](https://github.com/AAnimeshTripathy/Amazon-hackon/blob/main/images/paymentrecommendationpage.jpg)
 
 # Introduction
 Welcome to the Audacious Aloos' Amazon Payment and Financial Management Assistant project! Our solution aims to revolutionize the way you manage your finances and payment experiences on Amazon. We understand that keeping track of transactions, optimizing payment methods, and managing budgets can be daunting. That's why we've developed a comprehensive AI-powered assistant to help you streamline these processes.
