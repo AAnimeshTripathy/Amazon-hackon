@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProductDetails from "./pages/ProductDetails";
 import ScrollUp from "./utils/ScrollUp";
+import Chatbot from "./components/chatbot";
 
 export default function App() {
   return (
@@ -21,11 +22,15 @@ export default function App() {
           <Route path="products/:id" element={<ProductDetails />} />
           <Route path="accounts-lists" element={<AccountAndList />} />
           <Route path="checkout" element={<Checkout />} />
-          <Route path="accounts-lists/budget-dashboard" element={<BudgetDashboard />} />
+          <Route
+            path="accounts-lists/budget-dashboard"
+            element={<BudgetDashboard />}
+          />
         </Routes>
       </main>
       <ScrollUp />
       <ToastContainer />
+      <Chatbot />
       <Footer />
     </div>
   );
