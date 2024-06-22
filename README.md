@@ -11,7 +11,7 @@
 # Prototype Images
 1. **Payment Assistant Smart Payments**
 
-    ![image](https://github.com/AAnimeshTripathy/Amazon-hackon/blob/main/images/dashboard.jpg)
+    ![image](https://github.com/AAnimeshTripathy/Amazon-hackon/blob/main/images/chatbot.jpg)
     
 2. **Budget Dashboard and Management Tools**
 
@@ -55,7 +55,7 @@ Our solution integrates various AI and ML models to offer personalized payment r
 2. **Download and Install Visual Studio 2022:** Ensure to select "Desktop development with C++". [VS Code Download Link](https://visualstudio.microsoft.com/)
 3. **Clone the Repository:**
     ```
-    git clone 
+    git clone https://github.com/AAnimeshTripathy/Amazon-hackon.git
     ```
 4. **Setup Environment Variables:**
     - Create a `.env` file in `./backend` and add the following:
