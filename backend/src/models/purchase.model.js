@@ -2,8 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 const PurchaseDetailsSchema = new Schema({
   product_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Product",
+    type: String,
     required: true,
   },
   paid_amount: { type: Number, required: true },
