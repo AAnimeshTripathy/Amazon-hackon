@@ -55,32 +55,34 @@ Our solution integrates various AI and ML models to offer personalized payment r
 2. **Download and Install Visual Studio 2022:** Ensure to select "Desktop development with C++". [VS Code Download Link](https://visualstudio.microsoft.com/)
 3. **Clone the Repository:**
     ```
-    git clone https://github.com/chanpreet3000/amazon-hackon
+    git clone 
     ```
 4. **Setup Environment Variables:**
     - Create a `.env` file in `./backend` and add the following:
       ```
       REACT_APP_BASE_URL="http://localhost:8000"
+      PORT=8000
+      CORS_ORIGIN=*
+      MONGODB_URL='Generate-one from MongoDB Atlas'
       ```
     - Create a `.env` file in `./frontend` and add the following:
       ```
-      JWT_KEY="TEMP_JWT_KEY" # Change accordingly
-      MONGO_URL="Your MongoDB URL"
-      OPENAI_API_KEY="Your OpenAI API Key"
-      PORT=8000
+      REACT_APP_API_URL = 'https://fakestoreapi.com/products'
+      REACT_APP_FIREBASE_API_KEY = 'add-yours'
       ```
 5. **Install Dependencies and Start Servers:**
     - Backend:
       ```
       cd ./backend
       npm install
-      npm run start
+      npm i -D nodemon
+      npm run dev
       ```
     - Frontend:
       ```
-      cd ./frontend
-      npm install --legacy-peer-deps
-      npm run start
+      cd ./amazon-clone-react
+      npm install
+      npm start
       ```
 
 # Solution Details
