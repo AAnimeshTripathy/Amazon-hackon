@@ -8,8 +8,6 @@
 - Deployed on Website: [Website Link]()
 - Presentation of our prototype:
 
-  [![IMAGE ALT TEXT HERE]([(https://github.com/AAnimeshTripathy/Amazon-hackon/blob/main/images/Flowchart.jpg)])
-
 # Prototype Images
 1. **Payment Assistant Smart Payments**
 
@@ -50,7 +48,7 @@ Our solution integrates various AI and ML models to offer personalized payment r
 - **Other Technologies:** 
 
 # Methodology
-![image](https://github.com/)
+![image](https://github.com/AAnimeshTripathy/Amazon-hackon/blob/main/images/Flowchart.jpg)
 
 # Installation
 1. **Install MongoDB Community Server:** [Download Link](https://www.mongodb.com/try/download/community)
