@@ -8,7 +8,7 @@
 - Deployed on Website: [Website Link]()
 - Presentation of our prototype:
 
-  [![IMAGE ALT TEXT HERE](https://)]
+  [![IMAGE ALT TEXT HERE]([(https://github.com/AAnimeshTripathy/Amazon-hackon/blob/main/images/Flowchart.jpg)])
 
 # Prototype Images
 1. **Payment Assistant Smart Payments**
