@@ -20,7 +20,7 @@ body {
   );
   --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
-  --primary: #581b98;
+  --primary: #f09a29;
 }
 
 .container {

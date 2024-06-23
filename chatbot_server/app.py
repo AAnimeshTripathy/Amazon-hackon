@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import flask_cors
 import os
-from test import reco
+import json
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import os
@@ -17,6 +17,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 os.environ["GOOGLE_API_KEY"] = "AIzaSyCYeE0wT2nMhNV5aIwp1tpLrdKc37GRizM"
+app = Flask(__name__)
+flask_cors.CORS(app)
 
 def get_pdf_text(file_path):
     text = ""
@@ -60,15 +62,6 @@ def user_input(user_question):
     response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
 
     return response
-
-raw_text = get_pdf_text("chatdata.pdf")
-text_chunks = get_text_chunks(raw_text)
-get_vector_store(text_chunks)
-def res(user_question):
-    return user_input(user_question)
-import json
-model = genai.GenerativeModel('gemini-pro')
-
 def reco():
 
     response = model.generate_content('''You are a helpful Customer support Assistant who answers users' questions regarding the best payment method based on the following criteria:
@@ -89,14 +82,21 @@ def reco():
     - 25% weight for discounts.
     - 20% weight for cashback or gift cards.
 
-    Based on these criteria, calculate the scores for each payment method and rank them from best to least. Return the list in plain text format. give the answer in object format like json. dont write the word json on top, just give the object''')
-    json_data = json.loads(response.text)
+    Based on these criteria, calculate the scores for each payment method and rank them from best to least. Return the list in plain text format. give the answer in object format like json. order the payment options in decending order. dont write the word json on top, just give the object''')
+    re = response.text
+    re = re[4:]
+    re = re[:-3]
+    json_data = json.loads(re)
+    return jsonify(json_data)
 
 
-    return (json_data)
+raw_text = get_pdf_text("chatdata.pdf")
+text_chunks = get_text_chunks(raw_text)
+get_vector_store(text_chunks)
+def res(user_question):
+    return user_input(user_question)
 
-app = Flask(__name__)
-flask_cors.CORS(app)
+model = genai.GenerativeModel('gemini-pro')
 
 @app.route("/predict", methods=["POST"])
 def predict():
