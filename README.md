@@ -87,7 +87,14 @@ Our solution integrates various AI and ML models to offer personalized payment r
 
 # Solution Details
 ## Payment Assistant
-
+- **AI-Powered Chatbot**: Resolves repetitive and rule-based queries using generative AI.
+- **RAG Implementation**: Uses Retrieval-Augmented Generation for accurate query responses.
+- **Issue Escalation**: Redirects complex issues to customer support agents.
+- **LLM-Based**: Built on Large Language Models for continuous improvements.
+- **Personalization**: Fine-tuned for Amazon users and the payment platform.
+- **Positive Impact**: Reduces customer support load, decreases response times, and provides 24/7 support.
+- **Impact Metrics**: Measures user satisfaction, reduced query resolution time, and increased productivity.
+- **Technologies Used**: Utilizes OpenAI models (GPT-3.5 Turbo), Langchain for vector similarity search, and AWS for hosting and scalability.
 ## Smart Payments
 - **Data Retrieval:** Utilize NoSQL databases for comprehensive data.
 - **Data Preprocessing:** Use NumPy and Pandas for data collection and preprocessing.
